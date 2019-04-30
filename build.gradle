@@ -1,0 +1,22 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testImplementation 'com.intuit.karate:karate-junit4:0.9.2'
+    testImplementation 'com.intuit.karate:karate-apache:0.9.2'
+    testImplementation 'junit:junit:4.12'
+}
+
+sourceSets {
+    test {
+        resources {
+            srcDir file('src/test/java')
+            exclude '**/*.java'
+        }
+    }
+}
